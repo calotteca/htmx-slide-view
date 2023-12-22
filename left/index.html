@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+</head>
+<body hx-boost="true" hx-indicator="body">
+    <nav>
+        <a href="/left" id="link-left" class="active">Left</a>
+        <a href="/" id="link-center">center</a>
+        <a href="/right" id="link-right">Right</a>
+    </nav>
+    <main class="left" id="main">
+        <section id="panel-left" class="active">
+            <div id="panel-left-content">
+                <p>This page output content in the LEFT view.</p>
+                <img alt="" src="/left.jpg">                
+            </div>
+        </section>
+        <section id="panel-center"><div id="panel-center-content" hx-preserve></div></section>
+        <section id="panel-right"><div id="panel-right-content" hx-preserve></div></section>        
+    </main>
+</body>
+</html>

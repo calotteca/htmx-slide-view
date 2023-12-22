@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+</head>
+<body hx-boost="true" hx-indicator="body">
+    <nav>
+        <a href="/left" id="link-left">Left</a>
+        <a href="/" id="link-center" class="active">center</a>
+        <a href="/right" id="link-right">Right</a>
+    </nav>
+    <main class="center" id="main">
+        <section id="panel-left"><div id="panel-left-content" hx-preserve></div></section>
+        <section id="panel-center" class="active">
+            <div id="panel-center-content">
+                <p>This page output content in the CENTER view.</p>
+                <img alt="" src="/center.jpg">
+            </div>
+        </section>
+        <section id="panel-right"><div id="panel-right-content" hx-preserve></div></section>        
+    </main>
+</body>
+</html>
